@@ -1,153 +1,109 @@
-
-
 body {
-    font-family: "Montserrat", sans-serif;
-    margin: 40px;
-    font-weight: 400;
-        font-size: 16px;
-        color: #2e2f42;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .form {
+    width: 320px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 360px;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
 }
 
 .form label {
-    font-size: 14px;
-    color: #333;
-    text-align: left;
-
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: 16px;
+    font-weight: 400;
+    color: #374151;
+    gap: 6px;
 }
 
 .form input[type="number"] {
-    margin-top: 6px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
     border-radius: 6px;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-fieldset {
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px 14px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 12px;
-}
-
-/*  */
-
-fieldset input[type="radio"]:focus+*,
-fieldset input[type="radio"]:checked+* {
     outline: none;
+    font-size: 16px;
 }
 
-/*  */
-.form label :hover {
-    border: none;
-border: 1px solid black;
-}
-
-.form label :active {
-    border: 1px solid blue;
-}
-
-fieldset:has(input[type="radio"]:hover) {
-    border: 1px solid black;
+.form input[type="number"]:focus {
+    border-color: #6366f1;
 }
 
 
 
 legend {
-    font-size: 14px;
-    color: #333;
     text-align: left;
+    padding: 0 6px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #374151;
 }
 
-.radio-group {
+fieldset {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;   
+    gap: 20px;
+    justify-content: center;
 }
 
-
-
-.radio-group label {
+fieldset label {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 6px;
-    font-size: 14px;
-}
-/* _------------------------------------------------- */
-.form input[type="radio"] {
-    /* appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none; */
-
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    transition: border 0.2s ease-in-out, background 0.2s ease-in-out;
+    gap: 8px;
 }
 
-/* При наведении */
-.form input[type="radio"]:hover {
-    /* border-radius: 1px solid black; */
+fieldset input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  
+
+  border: 2px solid #9ca3af; 
+
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
 }
 
-/* Активная (выбранная) радиокнопка */
-.form input[type="radio"]:checked {
-    
+fieldset input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);           
+  background: #2563eb;            
+  transition: transform 0.15s ease-in-out;
 }
 
-/* Маленькая белая точка внутри */
-.form input[type="radio"]:checked::after {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 99%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+fieldset input[type="radio"]:checked {
+  border-color: #2563eb;          
 }
 
-/* ---------------------------------------------------- */
+fieldset input[type="radio"]:checked::before {
+  transform: scale(1);            
+}
+
+
 button[type="submit"] {
-    background-color: #4c6ef5;
+    padding: 12px;
+    background: #6366f1;
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 12px 20px; 
-    font-size: 15px;
     cursor: pointer;
-    transition: background 0.2s ease-in-out;
-    width: 100%;
-
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-        font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
 }
-
-button[type="submit"]:hover {
-    background-color: #3b5bdb;
-}
-
-
 

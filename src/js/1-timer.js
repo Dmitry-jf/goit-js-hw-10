@@ -83,3 +83,88 @@ refs.btnStart.addEventListener('click', () => {
     refs.clockface[3].textContent = String(objTime.seconds).padStart(2, '0');
   }, 1000);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const promise = new Promise((res, rej) => {
+//     const random = Math.round(Math.random() * 500) + 400;
+//     console.log(random);
+    
+
+//     setTimeout(() => {
+//         if (random % 2 === 0) {
+//             res("x")
+//         } else {
+//             rej("y")
+//         }
+//     }, random)        
+// })
+
+
+// promise.then((x) => {
+//     console.log('thanks');
+    
+// }).catch((y) => {
+//     console.log('erorr');
+     
+// })
+
+
+// // поочередная then c возвратом значения предідущего:
+
+// promise
+//     .then(() => {
+//         return 10;
+//     })
+//     .then(res => {      //res - єто 10  с предыдущего then
+//         return res * 2;
+//     })
+//     .then(res1 => {     //res1 - возврат предідущего then где 10 * 2;
+//         return res1 * 2;
+//     })
+//     .catch(() => {   // вернет 25 если будет ошибка
+//         return 25
+//     })
+
+
+
+
+
+
+
+
+
+
+
+
